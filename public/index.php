@@ -45,13 +45,14 @@ $CONFIG = require '../private/includes/config.example.php';
 require '../private/includes/init.php';
 $router = new AltoRouter();
 //Als jouw public folder niet te zien is als je naar http://localhoist gaat stel dan het juiste basePath in (pas dit pad aan naar jouw situatie)
-$router->setBasePath('DuckDuck/public/');
+$router->setBasePath($CONFIG['BASE_URL']);
 
 /**
  * Hier stellen we de juiste "routes" in voor onze website
  * We vertellen de router welke url naar welk stukje code (de controller) moet worden doorgestuuurd.
  */
 $router->map( 'GET', '/', 'TemplateController#templatepage', 'home');
+$router->map( 'GET', '/Duck', 'DuckController#duckpage', 'Duckerdeduck');
 
 $router->map( 'GET', '/registeer', 'RegisteerController#page', 'registeer' );
 $router->map( 'POST', '/registeer/insert', 'RegisteerController#insert', 'registeer.insert' );
