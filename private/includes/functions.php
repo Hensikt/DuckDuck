@@ -3,7 +3,7 @@
 function dbConnect()
 {
 
-    $config = require __DIR__ . '/config.php';
+    $config = require __DIR__ . '/config.example.php';
 
     try {
         $dsn = 'mysql:host=' . $config['DB_HOST'] . ';dbname=' . $config['DB_NAME'];
