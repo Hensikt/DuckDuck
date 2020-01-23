@@ -11,7 +11,7 @@ class TemplateController
         include __DIR__ . '/../views/header.php';
 
         //Hier komt julie deel van de website plak op deze plek = '/../file.php';
-        include __DIR__ . '/../views/blog.php';
+        include __DIR__ . '/../views/master.php';
 
         //Hier komt de footer met javascripts en andere stuff
         include __DIR__ . '/../views/footer.php';
