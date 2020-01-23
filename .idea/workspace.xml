@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="19aceedb-a8da-4e2a-9071-5947cc9209b4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/private/controllers/TemplateController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/private/views/master.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private/views/master.php" beforeDir="false" afterPath="$PROJECT_DIR$/private/views/master.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +54,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579774864410</updated>
-      <workItem from="1579774866210" duration="819000" />
+      <workItem from="1579774866210" duration="951000" />
     </task>
     <servers />
   </component>
