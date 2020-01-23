@@ -34,7 +34,7 @@
  * Lees vooral de documentatie op http://altorouter.com/
  *
  */
-require '../private/includes/AltoRouter.php';
+require './private/includes/AltoRouter.php';
 
 /**
  * Verder willen we nog wat andere zaken instellen en goed zetten
