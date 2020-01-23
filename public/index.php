@@ -52,6 +52,7 @@ $router->setBasePath('DuckDuck/public/');
  * We vertellen de router welke url naar welk stukje code (de controller) moet worden doorgestuuurd.
  */
 $router->map( 'GET', '/', 'TemplateController#templatepage', 'home');
+$router->map( 'GET', '/Duck', 'DuckController#duckpage', 'Duckerdeduck');
 
 $router->map( 'GET', '/voorbeeld', function () {
     echo 'Zo kun je ook een route afhandelen door een inline functie te gebruiken, maar dat wordt al snel rommelig (deze mag je dus weer weghalen of laten staan als voorbeeld';
