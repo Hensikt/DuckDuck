@@ -53,6 +53,9 @@ $router->setBasePath('DuckDuck/public/');
  */
 $router->map( 'GET', '/', 'TemplateController#templatepage', 'home');
 
+$router->map( 'GET', '/registeer', 'RegisteerController#page', 'registeer' );
+$router->map( 'POST', '/registeer/insert', 'RegisteerController#insert', 'registeer.insert' );
+
 $router->map( 'GET', '/voorbeeld', function () {
     echo 'Zo kun je ook een route afhandelen door een inline functie te gebruiken, maar dat wordt al snel rommelig (deze mag je dus weer weghalen of laten staan als voorbeeld';
 } );
