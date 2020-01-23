@@ -34,18 +34,18 @@
  * Lees vooral de documentatie op http://altorouter.com/
  *
  */
-require './private/includes/AltoRouter.php';
+require '../private/includes/AltoRouter.php';
 
 /**
  * Verder willen we nog wat andere zaken instellen en goed zetten
  * Dit staat in het bestand private/includes/init.php
  */
 
-$CONFIG = require './private/includes/config.example.php';
-require './private/includes/init.php';
+$CONFIG = require '../private/includes/config.example.php';
+require '../private/includes/init.php';
 $router = new AltoRouter();
 //Als jouw public folder niet te zien is als je naar http://localhoist gaat stel dan het juiste basePath in (pas dit pad aan naar jouw situatie)
-$router->setBasePath($CONFIG['BASE_URL']);
+$router->setBasePath('DuckDuck/public/');
 
 /**
  * Hier stellen we de juiste "routes" in voor onze website
