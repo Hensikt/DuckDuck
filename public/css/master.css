@@ -1,0 +1,26 @@
+/* Generale CSS voor de tables */
+table{
+    margin: 30px auto;
+    background-color: rgba(20, 0, 0, .72);
+    border: solid 2px black;
+    color: #ccc;
+    grid-column: 1/12;
+
+}
+th{
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    padding-right: 10px;
+}
+td{
+    margin: auto;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    padding-right: 15px;
+}
+td a{
+    text-decoration: none;
+    color: #ccc;
+}
+
+/* CSS voor de bezorger_overzicht table */

@@ -11,21 +11,18 @@
 class RegisteerController {
 
 	function page(){
+	    $errors = '';
         include __DIR__ . '/../views/registeer_page.php';
 	}
 
+	function errorspage($errors){
+        include __DIR__ . '/../views/registeer_page.php';
+    }
+
     function insert(){
-        include __DIR__ . '/../models/registeer.php';
+        include __DIR__ . '/../models/registreer.php';
 
-	    $gebruikersnaam = $_POST['gebruikersnaam'];
-	    $wachtwoord = password_hash($_POST['wachtwoord'], PASSWORD_BCRYPT);
-	    $email = $_POST['email'];
-	    $con = dbConnect();
-	    maakAccount($con,$gebruikersnaam,$wachtwoord,$email);
-
-        if (isset($_SERVER["HTTP_REFERER"])) {
-            header("Location: " . $_SERVER["HTTP_REFERER"]);
-        }
+        maakAccount();
     }
 
 }

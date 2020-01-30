@@ -55,7 +55,19 @@ $router->setBasePath($CONFIG['BASE_URL']);
 $router->map( 'GET', '/', 'TemplateController#templatepage', 'home');
 $router->map( 'GET', '/Duck', 'DuckController#duckpage', 'Duckerdeduck');
 
+// Overzicht page van de bezorgers
+$router->map( 'GET', '/overzicht', 'bezorgerOverzichtController#overzicht', 'DuckDuckOverzicht');
+$router->map( 'GET', '/delete', 'bezorgerOverzichtController#delete', 'DuckDuckDelete');
+$router->map( 'GET', '/edit', 'bezorgerOverzichtController#edit', 'DuckDuckEdit');
+
+// Bezorger informatie pagina
+$router->map( 'GET', '/bezorger', 'BezorgerController#bezorgerpage', 'bezorger');
+
+$router->map( 'GET', '/login', 'LoginController#page', 'login' );
+$router->map( 'POST', '/login/check', 'LoginController#check', 'login.check' );
+
 $router->map( 'GET', '/registeer', 'RegisteerController#page', 'registeer' );
+$router->map( 'GET', '/registeer/[i:errors]', 'RegisteerController#errorspage', 'registeer.errors' );
 $router->map( 'POST', '/registeer/insert', 'RegisteerController#insert', 'registeer.insert' );
 
 $router->map('GET', '/maaltijden', 'MaaltijdController#view', 'maaltijd.list');
