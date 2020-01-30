@@ -54,6 +54,8 @@ $router->setBasePath($CONFIG['BASE_URL']);
 $router->map( 'GET', '/', 'TemplateController#templatepage', 'home');
 $router->map( 'GET', '/Duck', 'DuckController#duckpage', 'Duckerdeduck');
 
+$router->map( 'GET', '/overzicht', 'bezorgerOverzichtController#overzicht', 'DuckDuckOverzicht');
+
 $router->map( 'GET', '/registeer', 'RegisteerController#page', 'registeer' );
 $router->map( 'POST', '/registeer/insert', 'RegisteerController#insert', 'registeer.insert' );
 
