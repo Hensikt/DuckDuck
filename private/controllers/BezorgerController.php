@@ -11,7 +11,7 @@ class BezorgerController
         include __DIR__ . '/../views/header.php';
 
         //Hier komt julie deel van de website plak op deze plek = '/../file.php';
-        echo 'test';
+        include __DIR__ . '/../views/bezorger_list.php';
 
         //Hier komt de footer met javascripts en andere stuff
         include __DIR__ . '/../views/footer.php';

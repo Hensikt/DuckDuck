@@ -44,8 +44,6 @@ require '../private/includes/AltoRouter.php';
 $CONFIG = require '../private/includes/config.example.php';
 require '../private/includes/init.php';
 
-//require '../private/includes/functions.php';
-
 $router = new AltoRouter();
 //Als jouw public folder niet te zien is als je naar http://localhoist gaat stel dan het juiste basePath in (pas dit pad aan naar jouw situatie)
 $router->setBasePath($CONFIG['BASE_URL']);
@@ -72,6 +70,12 @@ $router->map( 'POST', '/login/check', 'LoginController#check', 'login.check' );
 $router->map( 'GET', '/registeer', 'RegisteerController#page', 'registeer' );
 $router->map( 'GET', '/registeer/[i:errors]', 'RegisteerController#errorspage', 'registeer.errors' );
 $router->map( 'POST', '/registeer/insert', 'RegisteerController#insert', 'registeer.insert' );
+
+$router->map('GET', '/maaltijden', 'MaaltijdController#view', 'maaltijd.list');
+$router->map('GET', '/maaltijden/[i:id]', 'MaaltijdController#details', 'maaltijd.details');
+$router->map('GET', '/maaltijden/store/[i:id]', 'MaaltijdController#store', 'maaltijd.store');
+$router->map('GET', '/winkelwagen', 'MaaltijdController#winkelwagen', 'winkelwagen');
+
 
 $router->map( 'GET', '/voorbeeld', function () {
     echo 'Zo kun je ook een route afhandelen door een inline functie te gebruiken, maar dat wordt al snel rommelig (deze mag je dus weer weghalen of laten staan als voorbeeld';
