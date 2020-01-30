@@ -3,6 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="19aceedb-a8da-4e2a-9071-5947cc9209b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private/controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/private/controllers/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private/controllers/RegisteerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/private/controllers/RegisteerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private/includes/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/private/includes/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private/includes/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/private/includes/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private/models/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/private/models/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/private/models/registreer.php" beforeDir="false" afterPath="$PROJECT_DIR$/private/models/registreer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +69,8 @@
       <workItem from="1579774866210" duration="1616000" />
       <workItem from="1579776975576" duration="324000" />
       <workItem from="1579779145668" duration="134000" />
-      <workItem from="1580378466393" duration="44000" />
+      <workItem from="1580378466393" duration="1480000" />
+      <workItem from="1580380011252" duration="159000" />
     </task>
     <servers />
   </component>

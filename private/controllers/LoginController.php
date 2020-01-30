@@ -17,18 +17,7 @@ class LoginController {
 	function check(){
         include __DIR__ . '/../models/login.php';
 
-        $con = dbConnect();
-        $gebruikersnaam = $_POST['gebruikersnaam'];
-        $wachtwoord = $_POST['wachtwoord'];
-
-        $checker = check($con, $gebruikersnaam, $wachtwoord);
-        if (isset($_SERVER["HTTP_REFERER"])) {
-            if($checker){
-                echo 'gelukt';
-            } else {
-                header("Location: " . $_SERVER["HTTP_REFERER"]);
-            }
-        }
+        check();
     }
 
 }
