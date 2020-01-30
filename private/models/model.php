@@ -30,6 +30,36 @@ function delete(){
 }
 
 function edit(){
-    $pdo = dbConnect();
+    if (isset($_POST['submit'])) {
+        $pdo = dbConnect();
+        $bezorger = [
+            "id" => $_GET['id'],
+            "naam" => $_POST['naam'],
+            "bedrijf" => $_POST['bedrijf'],
+            "lidmaatschap" => $_POST['lidmaatschap']
+        ];
+
+        $sql = "UPDATE bezorgers 
+            SET naam = :naam,
+                bedrijf = :bedrijf,
+                lidmaatschap = :lidmaatschap
+            WHERE id = :id";
+
+        $id = $_GET['id'];
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':id', $id);
+        $stmt->execute($bezorger);
+    }
+    if (isset($_GET['id'])) {
+        $pdo = dbConnect();
+        $id = $_GET['id'];
+
+        $sql = "SELECT * FROM bezorgers WHERE id = :id";
+        $stmt = $pdo->prepare($sql) or die ("Sorry ik heb dit niet kunnen uitvoeren voor u");
+        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        $bezorger = $stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }
 ?>

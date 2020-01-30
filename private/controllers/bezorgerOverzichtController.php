@@ -24,4 +24,10 @@ class bezorgerOverzichtController
         include __DIR__ . '/../models/model.php';
         include __DIR__ . '/../views/delete.php';
     }
+
+    function edit()
+    {
+        include __DIR__ . '/../models/model.php';
+        include __DIR__ . '/../views/edit.php';
+    }
 }

@@ -44,7 +44,7 @@ require '../private/includes/AltoRouter.php';
 $CONFIG = require '../private/includes/config.example.php';
 require '../private/includes/init.php';
 
-require '../private/includes/functions.php';
+//require '../private/includes/functions.php';
 
 $router = new AltoRouter();
 //Als jouw public folder niet te zien is als je naar http://localhoist gaat stel dan het juiste basePath in (pas dit pad aan naar jouw situatie)
@@ -57,8 +57,10 @@ $router->setBasePath($CONFIG['BASE_URL']);
 $router->map( 'GET', '/', 'TemplateController#templatepage', 'home');
 $router->map( 'GET', '/Duck', 'DuckController#duckpage', 'Duckerdeduck');
 
+// Overzicht page van de bezorgers
 $router->map( 'GET', '/overzicht', 'bezorgerOverzichtController#overzicht', 'DuckDuckOverzicht');
 $router->map( 'GET', '/delete', 'bezorgerOverzichtController#delete', 'DuckDuckDelete');
+$router->map( 'GET', '/edit', 'bezorgerOverzichtController#edit', 'DuckDuckEdit');
 
 $router->map( 'GET', '/login', 'LoginController#page', 'login' );
 $router->map( 'POST', '/login/check', 'LoginController#check', 'login.check' );
