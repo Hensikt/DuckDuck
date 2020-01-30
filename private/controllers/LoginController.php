@@ -15,7 +15,7 @@ class LoginController {
 	}
 
 	function check(){
-        include __DIR__ . '/../models/login.php';
+        include __DIR__ . '/../models/loginModel.php';
 
         check();
     }

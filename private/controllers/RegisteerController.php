@@ -20,7 +20,7 @@ class RegisteerController {
     }
 
     function insert(){
-        include __DIR__ . '/../models/registreer.php';
+        include __DIR__ . '/../models/registreerModel.php';
 
         maakAccount();
     }
