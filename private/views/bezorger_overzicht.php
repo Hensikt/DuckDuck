@@ -13,16 +13,7 @@
             </tr>
         </thead>
         <tbody>
-        <?php foreach($result as $row) { ?>
-            <tr>
-                <td><?php echo escape($row['Bnaam']);?></td>
-                <td><?php echo escape($row['Bedrijf']);?></td>
-                <td><?php echo escape($row['Lidmaatschap']);?></td>
-
-                <td><a href="update.php?id=<?php echo escape($row['id']);?>">Edit</a></td>
-                <td><a href="delete.php?id=<?php echo escape($row['id']);?>">Delete</a></td>
-            </tr>
-        <?php } ?>
+        <?php overzicht(); ?>
         </tbody>
     </table>
 </div>
