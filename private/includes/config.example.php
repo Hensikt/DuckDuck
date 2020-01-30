@@ -2,7 +2,7 @@
 
 $config = [
     'DB_HOST' => 'localhost',
-    'DB_NAME' => 'duck',
+    'DB_NAME' => 'SEC',
     'DB_USER' => 'root',
     'DB_PASSWORD' => '',
     'ROOT' => dirname(dirname(__DIR__)),
