@@ -18,48 +18,40 @@ function overzicht(){
         endforeach;
 }
 
-function delete(){
+function delete($id){
     $pdo = dbConnect();
-    $id = $_GET['id'];
     $sql = "DELETE FROM bezorgers WHERE id = :id";
 
     $stmt = $pdo->prepare($sql) or die ('Sorry ik kan deze query niet uitvoeren');
     $stmt->bindValue(':id', $id);
     $stmt->execute();
-    header('location: overzicht');
 }
 
-function edit(){
-    if (isset($_POST['submit'])) {
+function store($id, $data){
+
         $pdo = dbConnect();
-        $bezorger = [
-            "id" => $_GET['id'],
-            "naam" => $_POST['naam'],
-            "bedrijf" => $_POST['bedrijf'],
-            "lidmaatschap" => $_POST['lidmaatschap']
-        ];
 
         $sql = "UPDATE bezorgers 
             SET naam = :naam,
                 bedrijf = :bedrijf,
                 lidmaatschap = :lidmaatschap
             WHERE id = :id";
+        
 
-        $id = $_GET['id'];
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(':id', $id);
-        $stmt->execute($bezorger);
-    }
-    if (isset($_GET['id'])) {
-        $pdo = dbConnect();
-        $id = $_GET['id'];
+        $stmt->execute($data);
 
-        $sql = "SELECT * FROM bezorgers WHERE id = :id";
-        $stmt = $pdo->prepare($sql) or die ("Sorry ik heb dit niet kunnen uitvoeren voor u");
-        $stmt->bindValue(':id', $id, PDO::PARAM_INT);
-        $stmt->execute();
+    return $bezorger;
+}
 
-        $bezorger = $stmt->fetch(PDO::FETCH_ASSOC);
-    }
+function read($id){
+    $pdo = dbConnect();
+    $sql = "SELECT * FROM bezorgers WHERE id = :id";
+    $stmt = $pdo->prepare($sql) or die ("Sorry ik heb dit niet kunnen uitvoeren voor u");
+    $stmt->bindValue(':id', $id, PDO::PARAM_INT);
+    $stmt->execute();
+    $bezorger = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $bezorger;
 }
 ?>

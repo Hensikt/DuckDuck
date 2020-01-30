@@ -61,6 +61,7 @@ $router->map( 'GET', '/Duck', 'DuckController#duckpage', 'Duckerdeduck');
 $router->map( 'GET', '/overzicht', 'bezorgerOverzichtController#overzicht', 'DuckDuckOverzicht');
 $router->map( 'GET', '/delete', 'bezorgerOverzichtController#delete', 'DuckDuckDelete');
 $router->map( 'GET', '/edit', 'bezorgerOverzichtController#edit', 'DuckDuckEdit');
+$router->map( 'POST', '/save', 'bezorgerOverzichtController#save', 'DuckDuckSave');
 
 // Bezorger informatie pagina
 $router->map( 'GET', '/bezorger', 'BezorgerController#bezorgerpage', 'bezorger');
