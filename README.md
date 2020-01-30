@@ -1,2 +1,2 @@
 # DuckDuck
-this page is propperty of DuckDuck.Inc®, DuckDuck.Ltd® and DuckDuck.LLC®
+this page is propperty of DuckDuck.Inc® and DuckDuck.Ltd®
