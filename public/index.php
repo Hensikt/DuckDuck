@@ -62,6 +62,9 @@ $router->map( 'GET', '/overzicht', 'bezorgerOverzichtController#overzicht', 'Duc
 $router->map( 'GET', '/delete', 'bezorgerOverzichtController#delete', 'DuckDuckDelete');
 $router->map( 'GET', '/edit', 'bezorgerOverzichtController#edit', 'DuckDuckEdit');
 
+// Bezorger informatie pagina
+$router->map( 'GET', '/bezorger', 'BezorgerController#bezorgerpage', 'bezorger');
+
 $router->map( 'GET', '/login', 'LoginController#page', 'login' );
 $router->map( 'POST', '/login/check', 'LoginController#check', 'login.check' );
 
