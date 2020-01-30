@@ -36,7 +36,7 @@ function store($id, $data){
                 bedrijf = :bedrijf,
                 lidmaatschap = :lidmaatschap
             WHERE id = :id";
-        
+
 
         $stmt = $pdo->prepare($sql);
         $stmt->bindValue(':id', $id);
